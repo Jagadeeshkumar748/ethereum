@@ -9,6 +9,6 @@ contract FundMe{
 
         require(msg.value > 1e18,"not enough");
         funders.push(msg.sender);
-        addressToAmoutFunded[msg.sender]=msg.value;
+        addressToAmoutFunded[msg.sender] += msg.value;
     }
 }
